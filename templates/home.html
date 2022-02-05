@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="/static/style/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/customscroll.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/javascript/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/javascript/connection.js"></script>
+    <script src="/static/javascript/modal.js"></script>
+
+    <title>Chat app</title>
+</head>
+
+<body>
+    <div style="display: block; animation: fadein 0.5s;" id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div style="text-align: center;">
+                <h2>Name yourself</h2>       
+                <div class="jointab">
+                    <input id="makename" type="text" placeholder="Username"> <br/>
+                    <button onclick="createName(document.getElementById('makename').value)" class="sendButton">Join</button>
+                </div> 
+            </div>
+        </div>
+
+    </div>
+    <div class="flexview">
+        <div id="headerid" class="header">
+            
+            <button onclick="logout()" class="logoutbtn" href="#">Logout</button>
+            <h2 id="showloggedin" style="display: inline; text-align: left; margin: 0; margin-top: 0.1em;  ">Logged in as:</h2>
+        </div>
+        <div id="messages" class="chatView">
+        </div>
+        <div id="sidemenu" class="left">
+            <h2>Online users</h2>
+            <div id="online-users" style="height: 91%; overflow-y: auto;">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <input onkeydown="chatEnter()" id="message" placeholder="Type here ..." type="text" />
+        <button onclick="sendText(document.getElementById('message').value)" class="sendButton">Send</button>
+    </div>
+
+</body>
+
+</html>
