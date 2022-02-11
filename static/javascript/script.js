@@ -21,6 +21,7 @@ function showMessage(text, username){
 function showPeople(user){
         var item = document.createElement('button');
         item.innerHTML = user;
+        item.style = "font-size: 1em"
         document.getElementById('online-users').append(item);
 }
 
@@ -106,5 +107,16 @@ window.onload = function(){
         document.getElementById('showloggedin').innerHTML = 'Logged in as: '+localStorage.getItem('username');
        // console.log(localStorage.getItem('username'))
     }
+
+}
+function joinenter(e){
+    $(document).keypress(
+        function(event){
+          if (event.which == '13') {
+                 event.preventDefault();
+                 createName(document.getElementById('makename').value)
+    
+          }
+      });
 
 }

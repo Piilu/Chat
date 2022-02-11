@@ -103,15 +103,18 @@ input{
     border-radius: 0.5em;
     width: 90%;
     height: 95%;
+    font-size: 1em;
     padding-left: 1em;
 }
 input:focus{
-    outline: 1px solid green;
+    outline: 1px solid orange;
 }
 .sendButton{
     height: 4em;
     border: none;
     background-color: wheat;
+    color: white;
+    font-size: 1em;
     padding: 1em;
     border-radius:0.5em;
     width: 8%;
@@ -134,6 +137,18 @@ input:focus{
   
 }
 
+.jointab button{
+    border: none;
+    background-color: wheat;
+    padding: 0.5em;
+    border-radius:0.5em;
+    width: 7em;
+  
+}
+.jointab button:hover{
+cursor: pointer;
+  
+}
 .logoutbtn{
     margin-top: 1em;
     float: right; 

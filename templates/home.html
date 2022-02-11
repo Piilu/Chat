@@ -28,8 +28,8 @@
             <div style="text-align: center;">
                 <h2>Name yourself</h2>       
                 <div class="jointab">
-                    <input id="makename" type="text" placeholder="Username"> <br/>
-                    <button onclick="createName(document.getElementById('makename').value)" class="sendButton">Join</button>
+                    <input onkeypress="joinenter(this)" id="makename" type="text" placeholder="Username"> <br/>
+                    <button style="color: white;" onclick="createName(document.getElementById('makename').value)">Join</button>
                 </div> 
             </div>
         </div>
